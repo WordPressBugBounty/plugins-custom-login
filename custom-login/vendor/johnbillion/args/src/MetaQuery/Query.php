@@ -44,7 +44,7 @@ final class Query implements Arrayable, Values {
 		return $class;
 	}
 
-	final public function addClause( Clause $clause, string $key = null ) : void {
+	final public function addClause( Clause $clause, ?string $key = null ) : void {
 		if ( null !== $key ) {
 			$this->clauses[ $key ] = $clause;
 		} else {
@@ -55,7 +55,7 @@ final class Query implements Arrayable, Values {
 	/**
 	 * @return ?array<string|int,mixed>
 	 */
-	final public function toArray() :? array {
+	final public function toArray() : ?array {
 		if ( ! isset( $this->clauses ) || count( $this->clauses ) === 0 ) {
 			return null;
 		}

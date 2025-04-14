@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
+class ComposerStaticInit166cc32d3bc70c13f4e7d3bc81f80475
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         '1a20c8c8ad0daee464581b090741335b' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/functions.php',
         'daae40667e0e805c1e3b33fa1d1fb32b' => __DIR__ . '/../..' . '/functions.php',
     );
@@ -22,13 +22,14 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Php80\\' => 23,
+            'Symfony\\Polyfill\\Php83\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
         ),
         'P' => 
         array (
             'Psr\\Container\\' => 14,
+            'PostTypes\\' => 10,
         ),
         'D' => 
         array (
@@ -54,9 +55,9 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'Symfony\\Polyfill\\Php80\\' => 
+        'Symfony\\Polyfill\\Php83\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php83',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -69,6 +70,10 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PostTypes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
         'Dwnload\\WpSettingsApi\\' => 
         array (
@@ -142,6 +147,7 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Args\\register_post_status' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_status.php',
         'Args\\register_post_type' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_type.php',
         'Args\\register_rest_field' => __DIR__ . '/..' . '/johnbillion/args/src/register_rest_field.php',
+        'Args\\register_setting' => __DIR__ . '/..' . '/johnbillion/args/src/register_setting.php',
         'Args\\register_taxonomy' => __DIR__ . '/..' . '/johnbillion/args/src/register_taxonomy.php',
         'Args\\register_term_meta' => __DIR__ . '/..' . '/johnbillion/args/src/register_term_meta.php',
         'Args\\wp_count_terms' => __DIR__ . '/..' . '/johnbillion/args/src/wp_count_terms.php',
@@ -166,7 +172,6 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Args\\wp_update_post' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_post.php',
         'Args\\wp_update_term' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_term.php',
         'Args\\wp_update_user' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_user.php',
-        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Composer\\Installers\\AglInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AglInstaller.php',
         'Composer\\Installers\\AkauntingInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AkauntingInstaller.php',
@@ -267,6 +272,15 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
+        'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
+        'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
+        'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
+        'DateInvalidTimeZoneException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidTimeZoneException.php',
+        'DateMalformedIntervalStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedIntervalStringException.php',
+        'DateMalformedPeriodStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedPeriodStringException.php',
+        'DateMalformedStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedStringException.php',
+        'DateObjectError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateObjectError.php',
+        'DateRangeError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateRangeError.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\AbstractLicenceManager' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/AbstractLicenceManager.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\LicenseManager' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/LicenseManager.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\Models\\ActivateLicense' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/Models/ActivateLicense.php',
@@ -292,7 +306,7 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Dwnload\\WpSettingsApi\\Settings\\SectionManager' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/Settings/SectionManager.php',
         'Dwnload\\WpSettingsApi\\TemplateLoader' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/TemplateLoader.php',
         'Dwnload\\WpSettingsApi\\WpSettingsApi' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/WpSettingsApi.php',
-        'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'Override' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/Override.php',
         'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
         'Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php',
         'Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php',
@@ -311,13 +325,17 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Pimple\\Tests\\Psr11\\ContainerTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ContainerTest.php',
         'Pimple\\Tests\\Psr11\\ServiceLocatorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/Psr11/ServiceLocatorTest.php',
         'Pimple\\Tests\\ServiceIteratorTest' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Tests/ServiceIteratorTest.php',
+        'PostTypes\\Columns' => __DIR__ . '/..' . '/jjgrainger/posttypes/src/Columns.php',
+        'PostTypes\\PostType' => __DIR__ . '/..' . '/jjgrainger/posttypes/src/PostType.php',
+        'PostTypes\\Taxonomy' => __DIR__ . '/..' . '/jjgrainger/posttypes/src/Taxonomy.php',
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'SQLite3Exception' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeader' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeader.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeaderItem' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeaderItem.php',
         'Symfony\\Component\\HttpFoundation\\BinaryFileResponse' => __DIR__ . '/..' . '/symfony/http-foundation/BinaryFileResponse.php',
+        'Symfony\\Component\\HttpFoundation\\ChainRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/ChainRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\Cookie' => __DIR__ . '/..' . '/symfony/http-foundation/Cookie.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\BadRequestException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/BadRequestException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\ConflictingHeadersException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/ConflictingHeadersException.php',
@@ -325,6 +343,7 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Symfony\\Component\\HttpFoundation\\Exception\\RequestExceptionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/RequestExceptionInterface.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/SessionNotFoundException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\SuspiciousOperationException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/SuspiciousOperationException.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/UnexpectedValueException.php',
         'Symfony\\Component\\HttpFoundation\\ExpressionRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/ExpressionRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\FileBag' => __DIR__ . '/..' . '/symfony/http-foundation/FileBag.php',
         'Symfony\\Component\\HttpFoundation\\File\\Exception\\AccessDeniedException' => __DIR__ . '/..' . '/symfony/http-foundation/File/Exception/AccessDeniedException.php',
@@ -349,18 +368,28 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Symfony\\Component\\HttpFoundation\\JsonResponse' => __DIR__ . '/..' . '/symfony/http-foundation/JsonResponse.php',
         'Symfony\\Component\\HttpFoundation\\ParameterBag' => __DIR__ . '/..' . '/symfony/http-foundation/ParameterBag.php',
         'Symfony\\Component\\HttpFoundation\\RateLimiter\\AbstractRequestRateLimiter' => __DIR__ . '/..' . '/symfony/http-foundation/RateLimiter/AbstractRequestRateLimiter.php',
+        'Symfony\\Component\\HttpFoundation\\RateLimiter\\PeekableRequestRateLimiterInterface' => __DIR__ . '/..' . '/symfony/http-foundation/RateLimiter/PeekableRequestRateLimiterInterface.php',
         'Symfony\\Component\\HttpFoundation\\RateLimiter\\RequestRateLimiterInterface' => __DIR__ . '/..' . '/symfony/http-foundation/RateLimiter/RequestRateLimiterInterface.php',
         'Symfony\\Component\\HttpFoundation\\RedirectResponse' => __DIR__ . '/..' . '/symfony/http-foundation/RedirectResponse.php',
         'Symfony\\Component\\HttpFoundation\\Request' => __DIR__ . '/..' . '/symfony/http-foundation/Request.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcherInterface' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcherInterface.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\AttributesRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/AttributesRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\ExpressionRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/ExpressionRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\HostRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/HostRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\IpsRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/IpsRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\IsJsonRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/IsJsonRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\MethodRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/MethodRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\PathRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/PathRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\PortRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/PortRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\SchemeRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/SchemeRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestStack' => __DIR__ . '/..' . '/symfony/http-foundation/RequestStack.php',
         'Symfony\\Component\\HttpFoundation\\Response' => __DIR__ . '/..' . '/symfony/http-foundation/Response.php',
         'Symfony\\Component\\HttpFoundation\\ResponseHeaderBag' => __DIR__ . '/..' . '/symfony/http-foundation/ResponseHeaderBag.php',
         'Symfony\\Component\\HttpFoundation\\ServerBag' => __DIR__ . '/..' . '/symfony/http-foundation/ServerBag.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Attribute\\AttributeBag' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Attribute/AttributeBag.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Attribute\\AttributeBagInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Attribute/AttributeBagInterface.php',
-        'Symfony\\Component\\HttpFoundation\\Session\\Attribute\\NamespacedAttributeBag' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php',
+        'Symfony\\Component\\HttpFoundation\\Session\\FlashBagAwareSessionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/FlashBagAwareSessionInterface.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Flash\\AutoExpireFlashBag' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Flash\\FlashBag' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Flash/FlashBag.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Flash\\FlashBagInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Flash/FlashBagInterface.php',
@@ -393,24 +422,25 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\PhpBridgeSessionStorageFactory' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/PhpBridgeSessionStorageFactory.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Proxy\\AbstractProxy' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Proxy/AbstractProxy.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Proxy\\SessionHandlerProxy' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php',
-        'Symfony\\Component\\HttpFoundation\\Session\\Storage\\ServiceSessionFactory' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/ServiceSessionFactory.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\SessionStorageFactoryInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/SessionStorageFactoryInterface.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\SessionStorageInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/SessionStorageInterface.php',
+        'Symfony\\Component\\HttpFoundation\\StreamedJsonResponse' => __DIR__ . '/..' . '/symfony/http-foundation/StreamedJsonResponse.php',
         'Symfony\\Component\\HttpFoundation\\StreamedResponse' => __DIR__ . '/..' . '/symfony/http-foundation/StreamedResponse.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\RequestAttributeValueSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/RequestAttributeValueSame.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseCookieValueSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseCookieValueSame.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseFormatSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseFormatSame.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHasCookie' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseHasCookie.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHasHeader' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseHasHeader.php',
+        'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHeaderLocationSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseHeaderLocationSame.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHeaderSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseHeaderSame.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseIsRedirected' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseIsRedirected.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseIsSuccessful' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseIsSuccessful.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseIsUnprocessable' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseIsUnprocessable.php',
         'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseStatusCodeSame' => __DIR__ . '/..' . '/symfony/http-foundation/Test/Constraint/ResponseStatusCodeSame.php',
+        'Symfony\\Component\\HttpFoundation\\UriSigner' => __DIR__ . '/..' . '/symfony/http-foundation/UriSigner.php',
         'Symfony\\Component\\HttpFoundation\\UrlHelper' => __DIR__ . '/..' . '/symfony/http-foundation/UrlHelper.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
-        'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
-        'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
+        'Symfony\\Polyfill\\Php83\\Php83' => __DIR__ . '/..' . '/symfony/polyfill-php83/Php83.php',
         'TheFrosty\\CustomLogin\\Api\\Activator' => __DIR__ . '/../..' . '/src/Api/Activator.php',
         'TheFrosty\\CustomLogin\\Api\\Cron' => __DIR__ . '/../..' . '/src/Api/Cron.php',
         'TheFrosty\\CustomLogin\\CustomLogin' => __DIR__ . '/../..' . '/src/CustomLogin.php',
@@ -432,13 +462,17 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'TheFrosty\\WpUtilities\\Api\\Hash' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Hash.php',
         'TheFrosty\\WpUtilities\\Api\\Instantiate' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Instantiate.php',
         'TheFrosty\\WpUtilities\\Api\\ObjectRegistrarManager' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/ObjectRegistrarManager.php',
+        'TheFrosty\\WpUtilities\\Api\\PageTemplates' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/PageTemplates.php',
         'TheFrosty\\WpUtilities\\Api\\RegistrarInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/RegistrarInterface.php',
         'TheFrosty\\WpUtilities\\Api\\TransientsTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/TransientsTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpCacheTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpCacheTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpQueryTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpQueryTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpRemote' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpRemote.php',
+        'TheFrosty\\WpUtilities\\Exceptions\\Exception' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Exceptions/Exception.php',
         'TheFrosty\\WpUtilities\\Models\\BaseModel' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/BaseModel.php',
+        'TheFrosty\\WpUtilities\\Models\\PageTemplate' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/PageTemplate.php',
         'TheFrosty\\WpUtilities\\Models\\WpQuery\\QueryArgs' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/WpQuery/QueryArgs.php',
+        'TheFrosty\\WpUtilities\\Models\\WpScript\\Args' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/WpScript/Args.php',
         'TheFrosty\\WpUtilities\\Plugin\\AbstractContainerProvider' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractContainerProvider.php',
         'TheFrosty\\WpUtilities\\Plugin\\AbstractHookProvider' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractHookProvider.php',
         'TheFrosty\\WpUtilities\\Plugin\\AbstractPlugin' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractPlugin.php',
@@ -493,17 +527,15 @@ class ComposerStaticInitb48062d4eabb6f12372b112939d7c61d
         'TheFrosty\\WpUtilities\\WpAdmin\\Models\\OptionValueLabel' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Models/OptionValueLabel.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\RestrictManagePosts' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/RestrictManagePosts.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\RestrictPostsInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/RestrictPostsInterface.php',
-        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
-        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb48062d4eabb6f12372b112939d7c61d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb48062d4eabb6f12372b112939d7c61d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb48062d4eabb6f12372b112939d7c61d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb48062d4eabb6f12372b112939d7c61d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit166cc32d3bc70c13f4e7d3bc81f80475::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit166cc32d3bc70c13f4e7d3bc81f80475::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit166cc32d3bc70c13f4e7d3bc81f80475::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit166cc32d3bc70c13f4e7d3bc81f80475::$classMap;
 
         }, null, ClassLoader::class);
     }
