@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'thefrosty/custom-login',
-        'pretty_version' => '4.5.0',
-        'version' => '4.5.0.0',
-        'reference' => '02e9e1db904780eec49e8a8cdd9e1f76d796d1a0',
+        'pretty_version' => '4.5.1',
+        'version' => '4.5.1.0',
+        'reference' => '0c217e42eed9a0aaad44dcbc3d5c149bf31f5ffe',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -110,9 +110,9 @@
             'dev_requirement' => false,
         ),
         'thefrosty/custom-login' => array(
-            'pretty_version' => '4.5.0',
-            'version' => '4.5.0.0',
-            'reference' => '02e9e1db904780eec49e8a8cdd9e1f76d796d1a0',
+            'pretty_version' => '4.5.1',
+            'version' => '4.5.1.0',
+            'reference' => '0c217e42eed9a0aaad44dcbc3d5c149bf31f5ffe',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
