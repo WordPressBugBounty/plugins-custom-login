@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Dwnload\WpSettingsApi\Api;
@@ -28,7 +29,7 @@ class Options
      *                          Defaults to an empty string.
      * @return mixed
      */
-    public static function getOption(string $option_key, ?string $section_id = null, mixed $default = ''): mixed
+    public static function getOption(string $option_key, ?string $section_id = null, $default = '')
     {
         if (empty($section_id)) {
             $section_id = self::getSectionId($option_key);
@@ -43,7 +44,7 @@ class Options
      * @param string $section_id The Section object ID the option belongs too.
      * @return mixed Value set for the option. Defaults to an empty array.
      */
-    public static function getOptions(string $section_id): mixed
+    public static function getOptions(string $section_id)
     {
         return get_option($section_id, []);
     }
@@ -60,13 +61,13 @@ class Options
     public static function getObfuscatedOption(
         string $option_key,
         string $section_id,
-        mixed $default = '',
+        $default = '',
         int $len = 6
-    ): mixed {
+    ) {
         $value = self::getOption($option_key, $section_id, $default);
 
         if (!empty($value)) {
-            return str_repeat('*', absint(strlen($value) - $len)) . substr($value, -$len, $len);
+            return str_repeat('*', absint(strlen((string)$value) - $len)) . substr((string)$value, -$len, $len);
         }
 
         return $value;
@@ -79,7 +80,7 @@ class Options
      */
     public static function isObfuscated(string $value): bool
     {
-        return str_contains($value, '****');
+        return strpos($value, '****') !== false;
     }
 
     /**

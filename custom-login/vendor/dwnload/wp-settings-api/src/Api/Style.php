@@ -96,13 +96,13 @@ class Style extends BaseModel
      * Style version.
      * @var int|string $version
      */
-    protected int|string $version;
+    protected $version;
 
     /**
      * Set Style version.
      * @param int|string $version
      */
-    public function setVersion(int|string $version = ''): void
+    public function setVersion($version = ''): void
     {
         $this->version = $version;
     }
@@ -111,7 +111,7 @@ class Style extends BaseModel
      * Get Style version.
      * @return int|string
      */
-    public function getVersion(): int|string
+    public function getVersion()
     {
         global $wp_version;
         return $this->version === '' ? $wp_version : $this->version;

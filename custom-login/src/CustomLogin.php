@@ -29,9 +29,18 @@ class CustomLogin extends AbstractHookProvider
 
     use Activator;
 
+    /**
+     * @var string
+     */
     public const API_URL = 'https://frosty.media/';
+    /**
+     * @var string
+     */
     public const OPTION = 'custom_login';
-    public const VERSION = '4.5.2';
+    /**
+     * @var string
+     */
+    public const VERSION = '5.0.0';
 
     /**
      * Get the API URL.
@@ -53,7 +62,7 @@ class CustomLogin extends AbstractHookProvider
     }
 
     /**
-     * Runs on plugin install.
+     * Runs on plugin installation.
      * @since 3.1
      * @updated 4.0.0
      */

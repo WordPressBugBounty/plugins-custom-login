@@ -30,6 +30,30 @@ use function sprintf;
 abstract class AddOn implements WpHooksInterface
 {
 
+    /**
+     * @var Plugin
+     */
+    protected Plugin $parent;
+    /**
+     * @var string
+     */
+    public string $file;
+    /**
+     * @var string
+     */
+    public string $version;
+    /**
+     * @var string
+     */
+    public string $domain;
+    /**
+     * @var string
+     */
+    public string $plugin_id;
+    /**
+     * @var string
+     */
+    public string $plugin_name;
     use HooksTrait;
 
     /**
@@ -48,13 +72,19 @@ abstract class AddOn implements WpHooksInterface
      * @param string $plugin_name
      */
     public function __construct(
-        protected Plugin $parent,
-        public string $file,
-        public string $version,
-        public string $domain,
-        public string $plugin_id,
-        public string $plugin_name
+        Plugin $parent,
+        string $file,
+        string $version,
+        string $domain,
+        string $plugin_id,
+        string $plugin_name
     ) {
+        $this->parent = $parent;
+        $this->file = $file;
+        $this->version = $version;
+        $this->domain = $domain;
+        $this->plugin_id = $plugin_id;
+        $this->plugin_name = $plugin_name;
         $this->domain = $this->parent->getSlug();
         $this->plugin_id = Factory::getSection($plugin_id);
         $this->fields = $this->getSettingsFields();

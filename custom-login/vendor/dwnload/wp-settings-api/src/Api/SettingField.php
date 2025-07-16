@@ -6,11 +6,13 @@ namespace Dwnload\WpSettingsApi\Api;
 
 use Dwnload\WpSettingsApi\Settings\FieldTypes;
 use TheFrosty\WpUtilities\Models\BaseModel;
+use function lcfirst;
+use function str_replace;
+use function ucwords;
 
 /**
  * Class SettingField
  * @package Dwnload\WpSettingsApi\Api
- * phpcs:disable SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification
  */
 class SettingField extends BaseModel
 {
@@ -38,7 +40,7 @@ class SettingField extends BaseModel
      * The Fields description.
      * @var string|null $description
      */
-    private ?string $description;
+    private ?string $description = null;
 
     /**
      * Sets the Fields description.
@@ -65,14 +67,14 @@ class SettingField extends BaseModel
      * The Fields default value.
      * @var mixed $default
      */
-    private mixed $default = '';
+    private $default = '';
 
     /**
      * Sets the Fields default value.
      * @param mixed $default
      * @return self
      */
-    public function setDefault(mixed $default): self
+    public function setDefault($default): self
     {
         $this->default = $default;
 
@@ -83,7 +85,7 @@ class SettingField extends BaseModel
      * Gets the Fields default value.
      * @return mixed
      */
-    public function getDefault(): mixed
+    public function getDefault()
     {
         return $this->default;
     }
@@ -157,14 +159,14 @@ class SettingField extends BaseModel
      * - if null the Field type name needs to have a method in the FieldTypes class.
      * @var mixed $class_object
      */
-    private mixed $class_object = null;
+    private $class_object = null;
 
     /**
      * Set the Fields output object.
      * @param mixed $class_object
      * @return self
      */
-    public function setClassObject(mixed $class_object): self
+    public function setClassObject($class_object): self
     {
         $this->class_object = $class_object;
 
@@ -175,7 +177,7 @@ class SettingField extends BaseModel
      * Get the Fields output object.
      * @return mixed
      */
-    public function getClassObject(): mixed
+    public function getClassObject()
     {
         return $this->class_object;
     }
@@ -213,7 +215,7 @@ class SettingField extends BaseModel
      * The Fields sanitize method callback.
      * @var mixed $sanitize_callback
      */
-    private mixed $sanitize_callback = null;
+    private $sanitize_callback = null;
 
     /**
      * Set the Fields sanitize callback.
@@ -221,7 +223,7 @@ class SettingField extends BaseModel
      * @param mixed $sanitize
      * @return self
      */
-    public function setSanitizeCallback(mixed $sanitize): self
+    public function setSanitizeCallback($sanitize): self
     {
         $this->sanitize_callback = $sanitize;
 
@@ -232,7 +234,7 @@ class SettingField extends BaseModel
      * Get the "sanitize" callback (if set).
      * @return mixed
      */
-    public function getSanitizeCallback(): mixed
+    public function getSanitizeCallback()
     {
         return $this->sanitize_callback;
     }

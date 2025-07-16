@@ -78,7 +78,7 @@ trait WpCacheTrait
      * @return mixed Cached object value.
      * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
-    public function getCache(string $key, ?string $group = null, bool $force = false, ?bool &$found = null): mixed
+    public function getCache(string $key, ?string $group = null, bool $force = false, ?bool &$found = null)
     {
         return wp_cache_get($key, $group ?? $this->getCacheGroup(), $force, $found);
     }
@@ -91,7 +91,7 @@ trait WpCacheTrait
      * @param int $expiration The expiration time, defaults to 0.
      * @return bool Returns TRUE on success or FALSE on failure.
      */
-    public function setCache(string $key, mixed $value, ?string $group = null, int $expiration = 0): bool
+    public function setCache(string $key, $value, ?string $group = null, int $expiration = 0): bool
     {
         return wp_cache_set($key, $value, $group ?? $this->getCacheGroup(), $expiration);
     }

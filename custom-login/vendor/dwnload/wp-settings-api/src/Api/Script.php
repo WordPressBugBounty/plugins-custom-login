@@ -98,13 +98,13 @@ class Script extends BaseModel
      * Script version.
      * @var int|string $version
      */
-    protected int|string $version;
+    protected $version;
 
     /**
      * Set the Script version.
      * @param int|string $version
      */
-    public function setVersion(int|string $version = ''): void
+    public function setVersion($version = ''): void
     {
         $this->version = $version;
     }
@@ -113,7 +113,7 @@ class Script extends BaseModel
      * Get the Script version.
      * @return int|string
      */
-    public function getVersion(): int|string
+    public function getVersion()
     {
         global $wp_version;
         return $this->version === '' ? $wp_version : $this->version;
@@ -148,7 +148,7 @@ class Script extends BaseModel
      * Inline Script data.
      * @var false|string $inline_script
      */
-    protected string|false $inline_script = false;
+    protected $inline_script = false;
 
     /**
      * Set the Inline Script data.
@@ -163,7 +163,7 @@ class Script extends BaseModel
      * Get the Inline Script data.
      * @return bool|string
      */
-    public function getInlineScript(): bool|string
+    public function getInlineScript()
     {
         return $this->inline_script;
     }

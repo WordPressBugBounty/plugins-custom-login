@@ -66,7 +66,7 @@ abstract class AbstractTaxonomy
     public static function getTerms(object $argument): array
     {
         return array_filter((new ReflectionClass($argument))->getConstants(), static function (string $key): bool {
-            return str_contains($key, 'TERM_');
+            return strpos($key, 'TERM_') !== false;
         }, ARRAY_FILTER_USE_KEY);
     }
 

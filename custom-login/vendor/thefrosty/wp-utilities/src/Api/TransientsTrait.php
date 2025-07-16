@@ -6,7 +6,6 @@ namespace TheFrosty\WpUtilities\Api;
 
 use function get_transient;
 use function is_numeric;
-use function md5;
 use function set_transient;
 use function strlen;
 use function substr;
@@ -18,7 +17,7 @@ use function substr;
 trait TransientsTrait
 {
 
-    use WpCacheTrait;
+    use Hash, WpCacheTrait;
 
     /**
      * Transient key prefix.
@@ -42,7 +41,9 @@ trait TransientsTrait
     {
         $key = $key_prefix ?? $this->prefix;
 
-        return $this->setQueryCacheKey($key . substr(md5($input), 0, $this->wp_max_transient_chars - strlen($key)));
+        return $this->setQueryCacheKey(
+            $key . substr($this->getHashedKey($input), 0, $this->wp_max_transient_chars - strlen($key))
+        );
     }
 
     /**
@@ -50,7 +51,7 @@ trait TransientsTrait
      * @param string $transient Transient name.
      * @return mixed
      */
-    public function getTransient(string $transient): mixed
+    public function getTransient(string $transient)
     {
         return get_transient($transient);
     }
@@ -62,7 +63,7 @@ trait TransientsTrait
      * @param int $expiration Optional. Time until expiration in seconds. Default 0 (no expiration).
      * @return bool
      */
-    public function setTransient(string $transient, mixed $value, int $expiration = 0): bool
+    public function setTransient(string $transient, $value, int $expiration = 0): bool
     {
         return set_transient($transient, $value, $expiration);
     }

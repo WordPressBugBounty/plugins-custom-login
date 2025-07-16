@@ -36,7 +36,7 @@ trait WpRemote
      * @param string $method The method type (supports GET & POST only).
      * @return mixed
      */
-    public function retrieveBody(string $url, array $args = [], string $method = 'GET'): mixed
+    public function retrieveBody(string $url, array $args = [], string $method = 'GET')
     {
         if (!in_array($method, ['GET', 'POST'], true)) {
             return false;
@@ -66,7 +66,7 @@ trait WpRemote
         ?int $expiration = 0,
         ?string $user_agent = null,
         ?string $version = null
-    ): mixed {
+    ) {
         $transient = $this->getTransientKey($url);
         $body = $this->getTransient($transient);
         if (empty($body)) {
@@ -99,7 +99,7 @@ trait WpRemote
      * @param array $args
      * @return array|WP_Error
      */
-    public function wpRemoteGet(string $url, array $args = []): WP_Error|array
+    public function wpRemoteGet(string $url, array $args = [])
     {
         return wp_remote_get(esc_url($url), $this->buildRequestArgs($args));
     }
@@ -110,7 +110,7 @@ trait WpRemote
      * @param array $args
      * @return array|WP_Error
      */
-    public function wpRemotePost(string $url, array $args = []): WP_Error|array
+    public function wpRemotePost(string $url, array $args = [])
     {
         return wp_remote_post(esc_url($url), $this->buildRequestArgs($args));
     }

@@ -93,7 +93,7 @@ abstract class AbstractColumns extends AbstractHookProvider
      */
     protected function setOptionKeyValues(array $data, string $key, array &$options = []): void
     {
-        array_walk($data, static function (mixed $value, int $key) use (&$data): void {
+        array_walk($data, static function ($value, int $key) use (&$data): void {
             $data[$key] = is_array($value) ? array_shift($value) : $value;
         });
         foreach (array_filter(array_unique($data)) as $item) {

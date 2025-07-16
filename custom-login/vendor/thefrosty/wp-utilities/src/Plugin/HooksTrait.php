@@ -161,7 +161,7 @@ trait HooksTrait
      * @param array ...$args Any extra values to send through the filter
      * @return mixed
      */
-    protected function applyFilters(string $filter, mixed $value, array ...$args): mixed
+    protected function applyFilters(string $filter, $value, array ...$args)
     {
         return \apply_filters($filter, $value, ...$args);
     }

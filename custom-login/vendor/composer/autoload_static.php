@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
+class ComposerStaticInitf62e2869c8a073942809daa8010715df
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -337,14 +337,20 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'Symfony\\Component\\HttpFoundation\\BinaryFileResponse' => __DIR__ . '/..' . '/symfony/http-foundation/BinaryFileResponse.php',
         'Symfony\\Component\\HttpFoundation\\ChainRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/ChainRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\Cookie' => __DIR__ . '/..' . '/symfony/http-foundation/Cookie.php',
+        'Symfony\\Component\\HttpFoundation\\EventStreamResponse' => __DIR__ . '/..' . '/symfony/http-foundation/EventStreamResponse.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\BadRequestException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/BadRequestException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\ConflictingHeadersException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/ConflictingHeadersException.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\ExpiredSignedUriException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/ExpiredSignedUriException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\JsonException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/JsonException.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/LogicException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\RequestExceptionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/RequestExceptionInterface.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/SessionNotFoundException.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\SignedUriException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/SignedUriException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\SuspiciousOperationException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/SuspiciousOperationException.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/UnexpectedValueException.php',
-        'Symfony\\Component\\HttpFoundation\\ExpressionRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/ExpressionRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\UnsignedUriException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/UnsignedUriException.php',
+        'Symfony\\Component\\HttpFoundation\\Exception\\UnverifiedSignedUriException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/UnverifiedSignedUriException.php',
         'Symfony\\Component\\HttpFoundation\\FileBag' => __DIR__ . '/..' . '/symfony/http-foundation/FileBag.php',
         'Symfony\\Component\\HttpFoundation\\File\\Exception\\AccessDeniedException' => __DIR__ . '/..' . '/symfony/http-foundation/File/Exception/AccessDeniedException.php',
         'Symfony\\Component\\HttpFoundation\\File\\Exception\\CannotWriteFileException' => __DIR__ . '/..' . '/symfony/http-foundation/File/Exception/CannotWriteFileException.php',
@@ -372,21 +378,23 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'Symfony\\Component\\HttpFoundation\\RateLimiter\\RequestRateLimiterInterface' => __DIR__ . '/..' . '/symfony/http-foundation/RateLimiter/RequestRateLimiterInterface.php',
         'Symfony\\Component\\HttpFoundation\\RedirectResponse' => __DIR__ . '/..' . '/symfony/http-foundation/RedirectResponse.php',
         'Symfony\\Component\\HttpFoundation\\Request' => __DIR__ . '/..' . '/symfony/http-foundation/Request.php',
-        'Symfony\\Component\\HttpFoundation\\RequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcherInterface' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcherInterface.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\AttributesRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/AttributesRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\ExpressionRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/ExpressionRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\HeaderRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/HeaderRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\HostRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/HostRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\IpsRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/IpsRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\IsJsonRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/IsJsonRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\MethodRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/MethodRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\PathRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/PathRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\PortRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/PortRequestMatcher.php',
+        'Symfony\\Component\\HttpFoundation\\RequestMatcher\\QueryParameterRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/QueryParameterRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestMatcher\\SchemeRequestMatcher' => __DIR__ . '/..' . '/symfony/http-foundation/RequestMatcher/SchemeRequestMatcher.php',
         'Symfony\\Component\\HttpFoundation\\RequestStack' => __DIR__ . '/..' . '/symfony/http-foundation/RequestStack.php',
         'Symfony\\Component\\HttpFoundation\\Response' => __DIR__ . '/..' . '/symfony/http-foundation/Response.php',
         'Symfony\\Component\\HttpFoundation\\ResponseHeaderBag' => __DIR__ . '/..' . '/symfony/http-foundation/ResponseHeaderBag.php',
         'Symfony\\Component\\HttpFoundation\\ServerBag' => __DIR__ . '/..' . '/symfony/http-foundation/ServerBag.php',
+        'Symfony\\Component\\HttpFoundation\\ServerEvent' => __DIR__ . '/..' . '/symfony/http-foundation/ServerEvent.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Attribute\\AttributeBag' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Attribute/AttributeBag.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Attribute\\AttributeBagInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Attribute/AttributeBagInterface.php',
         'Symfony\\Component\\HttpFoundation\\Session\\FlashBagAwareSessionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/FlashBagAwareSessionInterface.php',
@@ -458,12 +466,17 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'TheFrosty\\CustomLogin\\WpAdmin\\SettingsUpgrades' => __DIR__ . '/../..' . '/src/WpAdmin/SettingsUpgrades.php',
         'TheFrosty\\CustomLogin\\WpAdmin\\Tracking' => __DIR__ . '/../..' . '/src/WpAdmin/Tracking.php',
         'TheFrosty\\CustomLogin\\WpLogin\\Login' => __DIR__ . '/../..' . '/src/WpLogin/Login.php',
-        'TheFrosty\\WpUtilities\\Api\\GitHub\\Updater' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/GitHub/Updater.php',
         'TheFrosty\\WpUtilities\\Api\\Hash' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Hash.php',
         'TheFrosty\\WpUtilities\\Api\\Instantiate' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Instantiate.php',
         'TheFrosty\\WpUtilities\\Api\\ObjectRegistrarManager' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/ObjectRegistrarManager.php',
         'TheFrosty\\WpUtilities\\Api\\PageTemplates' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/PageTemplates.php',
         'TheFrosty\\WpUtilities\\Api\\RegistrarInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/RegistrarInterface.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\AbstractShortcode' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/AbstractShortcode.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\HandlerInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/HandlerInterface.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\PaginationTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/PaginationTrait.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\ShortcodeUiTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/ShortcodeUiTrait.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\ShortcodeInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/ShortcodeInterface.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\ShortcodeRegistrar' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/ShortcodeRegistrar.php',
         'TheFrosty\\WpUtilities\\Api\\TransientsTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/TransientsTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpCacheTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpCacheTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpQueryTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpQueryTrait.php',
@@ -476,6 +489,7 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'TheFrosty\\WpUtilities\\Plugin\\AbstractContainerProvider' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractContainerProvider.php',
         'TheFrosty\\WpUtilities\\Plugin\\AbstractHookProvider' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractHookProvider.php',
         'TheFrosty\\WpUtilities\\Plugin\\AbstractPlugin' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractPlugin.php',
+        'TheFrosty\\WpUtilities\\Plugin\\AbstractSingletonProvider' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/AbstractSingletonProvider.php',
         'TheFrosty\\WpUtilities\\Plugin\\Container' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/Container.php',
         'TheFrosty\\WpUtilities\\Plugin\\Container100' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/Container100.php',
         'TheFrosty\\WpUtilities\\Plugin\\Container110' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Plugin/Container110.php',
@@ -518,6 +532,7 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'TheFrosty\\WpUtilities\\Utils\\Viewable' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Utils/Viewable.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\AddPluginIcons' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/AddPluginIcons.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\AdminColumns' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/AdminColumns.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Capabilities' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Capabilities.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\Columns\\AbstractColumns' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Columns/AbstractColumns.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\DashboardWidget' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/DashboardWidget.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\Dashboard\\SimplePie' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Dashboard/SimplePie.php',
@@ -527,15 +542,21 @@ class ComposerStaticInit15bd415f3556cc0251f16183d49c6daa
         'TheFrosty\\WpUtilities\\WpAdmin\\Models\\OptionValueLabel' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Models/OptionValueLabel.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\RestrictManagePosts' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/RestrictManagePosts.php',
         'TheFrosty\\WpUtilities\\WpAdmin\\RestrictPostsInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/RestrictPostsInterface.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Roles\\RoleManager' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Roles/RoleManager.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Users\\Fields\\FieldType' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Users/Fields/FieldType.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Users\\Fields\\Type' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Users/Fields/Type.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Users\\Fields\\UserMetaFieldRegistrar' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Users/Fields/UserMetaFieldRegistrar.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Users\\Models\\UserMetaField' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Users/Models/UserMetaField.php',
+        'TheFrosty\\WpUtilities\\WpAdmin\\Users\\Profile' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/WpAdmin/Users/Profile.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit15bd415f3556cc0251f16183d49c6daa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit15bd415f3556cc0251f16183d49c6daa::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit15bd415f3556cc0251f16183d49c6daa::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit15bd415f3556cc0251f16183d49c6daa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf62e2869c8a073942809daa8010715df::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf62e2869c8a073942809daa8010715df::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf62e2869c8a073942809daa8010715df::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf62e2869c8a073942809daa8010715df::$classMap;
 
         }, null, ClassLoader::class);
     }

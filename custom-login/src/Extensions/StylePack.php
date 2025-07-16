@@ -39,7 +39,7 @@ trait StylePack
         $settings = [];
 
         foreach ($this->fields as $field) {
-            if (!\str_contains($_GET['action'], $field['name'])) {
+            if (strpos($_GET['action'], $field['name']) === false) {
                 continue;
             }
             $style = $field['name'];

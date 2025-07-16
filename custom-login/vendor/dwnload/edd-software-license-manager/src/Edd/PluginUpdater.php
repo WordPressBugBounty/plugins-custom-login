@@ -82,7 +82,7 @@ class PluginUpdater implements WpHooksInterface
      * @param mixed $value Update array build by WordPress.
      * @return array|\stdClass Modified update array with custom plugin data.
      */
-    protected function checkUpdate(mixed $value): array|\stdClass
+    protected function checkUpdate($value)
     {
         if (!is_object($value)) {
             $value = new \stdClass();
@@ -114,7 +114,7 @@ class PluginUpdater implements WpHooksInterface
      * @param object|null $args
      * @return mixed
      */
-    protected function pluginsApiFilter(mixed $result, string $action = '', ?object $args = null): mixed
+    protected function pluginsApiFilter($result, string $action = '', ?object $args = null)
     {
         if ('plugin_information' !== $action) {
             return $result;
@@ -338,7 +338,7 @@ class PluginUpdater implements WpHooksInterface
      * Save to cache.
      * @return false|object
      */
-    private function getRepoApiData(): false|object
+    private function getRepoApiData()
     {
         $version_info = $this->getCachedVersionInfo();
 
@@ -417,7 +417,7 @@ class PluginUpdater implements WpHooksInterface
      * @param mixed $data
      * @return array
      */
-    private function convertObjectToArray(mixed $data): array
+    private function convertObjectToArray($data): array
     {
         if (!is_array($data) && !is_object($data)) {
             return [];
@@ -438,7 +438,7 @@ class PluginUpdater implements WpHooksInterface
      * @param array $data Parameters for the API action.
      * @return object|bool
      */
-    private function apiRequest(string $action, array $data): object|bool
+    private function apiRequest(string $action, array $data)
     {
         $data = array_merge($this->api_data, $data);
 
@@ -501,7 +501,7 @@ class PluginUpdater implements WpHooksInterface
      * Gets the current version information from the remote site.
      * @return object|bool
      */
-    private function getVersionFromRemote(): object|bool
+    private function getVersionFromRemote()
     {
         $api_params = [
             'edd_action' => 'get_version',
@@ -576,7 +576,7 @@ class PluginUpdater implements WpHooksInterface
      * @param string $cache_key
      * @return object|bool
      */
-    private function getCachedVersionInfo(string $cache_key = ''): object|bool
+    private function getCachedVersionInfo(string $cache_key = '')
     {
         if (empty($cache_key)) {
             $cache_key = $this->getCacheKey();

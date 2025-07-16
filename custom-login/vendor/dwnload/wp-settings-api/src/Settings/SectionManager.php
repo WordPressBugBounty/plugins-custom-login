@@ -15,11 +15,10 @@ class SectionManager
 {
 
     /**
-     * WpSettingsApi object.
-     * @var WpSettingsApi $wp_settings_api
+     * @var WpSettingsApi
+     * @readonly
      */
     private WpSettingsApi $wp_settings_api;
-
     /**
      * SectionManager constructor.
      * @param WpSettingsApi $wp_settings_api

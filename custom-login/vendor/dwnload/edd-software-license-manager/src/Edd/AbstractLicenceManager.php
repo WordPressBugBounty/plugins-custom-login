@@ -21,6 +21,10 @@ use function __;
 abstract class AbstractLicenceManager
 {
 
+    /**
+     * @var Plugin
+     */
+    protected Plugin $parent;
     use TransientsTrait;
 
     public const ACTIVATE_LICENCE = 'activate_license';
@@ -35,8 +39,9 @@ abstract class AbstractLicenceManager
      * @param Plugin $parent
      * @param array $data
      */
-    public function __construct(protected Plugin $parent, array $data)
+    public function __construct(Plugin $parent, array $data)
     {
+        $this->parent = $parent;
         $this->pluginData = new PluginData($data);
     }
 
@@ -49,12 +54,20 @@ abstract class AbstractLicenceManager
      */
     public function buildSubmitButton(string $plugin_id, string $class, string $action, string $status): void
     {
-        $text = match ($action) {
-            LicenseStatus::LICENSE_DEACTIVATE => $this->getStrings()['deactivate-license'],
-            LicenseStatus::LICENSE_CHECK_LICENSE => $this->getStrings()['check-license'],
-            LicenseStatus::LICENSE_ACTIVATE => $this->getStrings()['activate-license'],
-            default => 'Unknown',
-        };
+        switch ($action) {
+            case LicenseStatus::LICENSE_DEACTIVATE:
+                $text = $this->getStrings()['deactivate-license'];
+                break;
+            case LicenseStatus::LICENSE_CHECK_LICENSE:
+                $text = $this->getStrings()['check-license'];
+                break;
+            case LicenseStatus::LICENSE_ACTIVATE:
+                $text = $this->getStrings()['activate-license'];
+                break;
+            default:
+                $text = 'Unknown';
+                break;
+        }
 
         \printf(
             '<a id="EddSoftwareLicenseManagerButton_%3$s" class="button %2$s" data-action="%3$s" data-plugin_id="%5$s" data-status="%4$s">%1$s</a>',
@@ -125,7 +138,7 @@ abstract class AbstractLicenceManager
      * @param int $item_id
      * @return false|array
      */
-    protected function activateLicense(string $license, string $plugin_id, int $item_id): false|array
+    protected function activateLicense(string $license, string $plugin_id, int $item_id)
     {
         if (empty($license)) {
             return false;
@@ -166,7 +179,7 @@ abstract class AbstractLicenceManager
      * @param int $item_id
      * @return false|array
      */
-    protected function deactivateLicense(string $license, string $plugin_id, int $item_id): false|array
+    protected function deactivateLicense(string $license, string $plugin_id, int $item_id)
     {
         $api_params = [
             'edd_action' => self::DEACTIVATE_LICENCE,

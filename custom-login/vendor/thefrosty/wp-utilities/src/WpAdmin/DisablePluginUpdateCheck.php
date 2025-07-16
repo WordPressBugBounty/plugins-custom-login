@@ -36,7 +36,7 @@ class DisablePluginUpdateCheck extends AbstractHookProvider
      */
     protected function httpRequestRemovePluginBasename(array $args, string $url): array
     {
-        if (\str_starts_with($url, self::WP_ORG_UPDATE_CHECK)) {
+        if (strncmp($url, self::WP_ORG_UPDATE_CHECK, strlen(self::WP_ORG_UPDATE_CHECK)) === 0) {
             if (!empty($args['body']['plugins'])) {
                 $plugins = \json_decode($args['body']['plugins'], true);
                 unset($plugins['plugins'][$this->getPlugin()->getBasename()]);
@@ -44,7 +44,7 @@ class DisablePluginUpdateCheck extends AbstractHookProvider
             }
         }
         if (
-            \str_starts_with($url, self::WP_ORG_PLUGINS_INFO) &&
+            strncmp($url, self::WP_ORG_PLUGINS_INFO, strlen(self::WP_ORG_PLUGINS_INFO)) === 0 &&
             \is_string(\parse_url($url, \PHP_URL_QUERY))
         ) {
             \parse_str(\parse_url($url, \PHP_URL_QUERY), $result);
@@ -71,10 +71,10 @@ class DisablePluginUpdateCheck extends AbstractHookProvider
      * @param string $url The request URL.
      * @return mixed
      */
-    protected function bypassHttpRequest($preempt, array $parsed_args, string $url): mixed
+    protected function bypassHttpRequest($preempt, array $parsed_args, string $url)
     {
         if (
-            str_starts_with($url, self::WP_ORG_PLUGINS_INFO) &&
+            strncmp($url, self::WP_ORG_PLUGINS_INFO, strlen(self::WP_ORG_PLUGINS_INFO)) === 0 &&
             !empty($parsed_args[self::BYPASS_KEY]) &&
             $parsed_args[self::BYPASS_KEY] === $this->getPlugin()->getSlug()
         ) {
@@ -101,7 +101,7 @@ class DisablePluginUpdateCheck extends AbstractHookProvider
      * @param mixed $value
      * @return mixed
      */
-    protected function transientRemovePluginBasename(mixed $value): mixed
+    protected function transientRemovePluginBasename($value)
     {
         if (isset($value) && \is_object($value) && (!empty($value->response) && \is_array($value->response))) {
             if (!$this->hasGitHubUpdater()) {

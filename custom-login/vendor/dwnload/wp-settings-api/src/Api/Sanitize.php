@@ -23,7 +23,7 @@ class Sanitize
      * @param string $option_slug
      * @return mixed
      */
-    public static function sanitizeObfuscated(mixed $value, array $options, string $option_slug): mixed
+    public static function sanitizeObfuscated($value, array $options, string $option_slug)
     {
         $section_id = self::getSectionId($option_slug);
 

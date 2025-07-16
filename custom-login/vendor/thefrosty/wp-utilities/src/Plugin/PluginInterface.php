@@ -9,7 +9,13 @@ namespace TheFrosty\WpUtilities\Plugin;
  */
 interface PluginInterface
 {
+    /**
+     * @var int
+     */
     public const DEFAULT_PRIORITY = 10;
+    /**
+     * @var string
+     */
     public const DEFAULT_TAG = 'init';
 
     /**
@@ -169,7 +175,7 @@ interface PluginInterface
      * @link https://codex.wordpress.org/Plugin_API/Action_Reference
      * @param string $wp_hook String value of the WpHooksInterface hook provider.
      * @param bool $condition The condition that needs to be met before adding the new hook provider.
-     * @param string $deferred_tag The name of the action to deffer the $function is hooked. Default 'plugins_loaded'.
+     * @param string $deferred_tag The name of the action to defer the $function is hooked. Default 'plugins_loaded'.
      * @return $this
      * @throws \InvalidArgumentException
      */
@@ -216,7 +222,7 @@ interface PluginInterface
      * @param string $wp_hook String value of the WpHooksInterface hook provider.
      * @param callable $function The condition that needs to be met before adding the new hook provider.
      * @param array|null $func_args The parameters to be passed to the function, as an indexed array.
-     * @param string $deferred_tag The name of the action to deffer the $function is hooked. Default 'plugins_loaded'.
+     * @param string $deferred_tag The name of the action to defer the $function is hooked. Default 'plugins_loaded'.
      * @param string|null $tag Optional. The name of the action to which the $function_to_add is hooked. Default 'init'.
      * @param int|null $priority Optional. Used to specify the order in which the functions
      *                                  associated with a particular action are executed. Default 10.
@@ -253,6 +259,31 @@ interface PluginInterface
      */
     public function addOnHook(
         string $wp_hook,
+        ?string $tag = null,
+        ?int $priority = null,
+        ?bool $admin_only = null,
+        array $args = []
+    ): self;
+
+
+    /**
+     * Register hooks for the plugin on a specific action tag.
+     *
+     * @link https://codex.wordpress.org/Plugin_API/Action_Reference
+     * @param string $wp_hook String value of the WpHooksInterface hook provider.
+     * @param string $deferred_tag The name of the action to defer the $function is hooked. Default 'init'.
+     * @param string|null $tag Optional. The name of the action to which the $function_to_add is hooked. Default 'init'.
+     * @param int|null $priority Optional. Used to specify the order in which the functions
+     *                                  associated with a particular action are executed. Default 10.
+     * @param bool|null $admin_only Optional. Whether to only initiate the object when `is_admin()` is true. Defaults to
+     *     null.
+     * @param array $args Argument unpacking via ... passed to the `$wp_hook` constructor.
+     * @return $this
+     * @throws \InvalidArgumentException
+     */
+    public function addOnHookDeferred(
+        string $wp_hook,
+        string $deferred_tag = 'init',
         ?string $tag = null,
         ?int $priority = null,
         ?bool $admin_only = null,

@@ -24,7 +24,7 @@ class CheckLicense extends LicenseStatus
     private int $site_count;
 
     /** @var  int|string $activations_left */
-    private int|string $activations_left;
+    private $activations_left;
 
     /**
      * @param bool $success
@@ -93,7 +93,7 @@ class CheckLicense extends LicenseStatus
     /**
      * @param int|string $activations_left
      */
-    public function setActivationsLeft(int|string $activations_left): void
+    public function setActivationsLeft($activations_left): void
     {
         $this->activations_left = $activations_left;
     }
@@ -101,7 +101,7 @@ class CheckLicense extends LicenseStatus
     /**
      * @return int
      */
-    public function getActivationsLeft(): int|string
+    public function getActivationsLeft()
     {
         return $this->activations_left;
     }

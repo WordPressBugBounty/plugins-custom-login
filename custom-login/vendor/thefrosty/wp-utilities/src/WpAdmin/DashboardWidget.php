@@ -1,10 +1,13 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TheFrosty\WpUtilities\WpAdmin;
 
 use TheFrosty\WpUtilities\Plugin\HooksTrait;
 use TheFrosty\WpUtilities\Plugin\Plugin;
 use TheFrosty\WpUtilities\Plugin\WpHooksInterface;
+use TheFrosty\WpUtilities\Utils\View;
 use TheFrosty\WpUtilities\WpAdmin\Dashboard\Widget;
 use function apply_filters;
 use function sanitize_key;
@@ -20,12 +23,15 @@ class DashboardWidget implements WpHooksInterface
 
     use HooksTrait;
 
-    public const OBJECT_NAME = 'DashboardWidget';
+    /**
+     * @var string
+     */
     public const HOOK_NAME_ALLOWED_S = Plugin::TAG . '/%s/dashboard_allowed';
+    /**
+     * @var string
+     */
     public const HOOK_NAME_RENDER = Plugin::TAG . '/render/dashboard_widget';
 
-    /** @var array $args */
-    private array $args;
 
     /** @var Widget $widget */
     private Widget $widget;
@@ -36,7 +42,7 @@ class DashboardWidget implements WpHooksInterface
      */
     public function __construct(array $args)
     {
-        $this->args = $args;
+        $this->setWidget($args);
     }
 
     /**
@@ -52,7 +58,6 @@ class DashboardWidget implements WpHooksInterface
      */
     protected function loadIndexPhp(): void
     {
-        $this->setWidget($this->args);
         $this->addAction('wp_dashboard_setup', [$this, 'addDashboardWidget']);
     }
 
@@ -69,7 +74,13 @@ class DashboardWidget implements WpHooksInterface
             $this->getWidget()->getWidgetId(),
             $this->getWidget()->getWidgetName(),
             function (): void {
-                include __DIR__ . '/../../views/dashboard-widget.php';
+                (new View())->render(
+                    'dashboard-widget.php',
+                    [
+                        'instance' => $this,
+                        'widgetId' => $this->getWidget()->getWidgetId(),
+                    ]
+                );
             }
         );
     }
@@ -98,10 +109,13 @@ class DashboardWidget implements WpHooksInterface
      */
     private function isDashboardAllowed(): bool
     {
-        $allowed = apply_filters(sprintf(
-            self::HOOK_NAME_ALLOWED_S,
-            sanitize_key($this->getWidget()->getWidgetId())
-        ), true);
+        $allowed = apply_filters(
+            sprintf(
+                self::HOOK_NAME_ALLOWED_S,
+                sanitize_key($this->getWidget()->getWidgetId())
+            ),
+            true
+        );
 
         return $allowed === true;
     }

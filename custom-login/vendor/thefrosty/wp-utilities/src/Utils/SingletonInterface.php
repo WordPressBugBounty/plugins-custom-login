@@ -14,5 +14,5 @@ interface SingletonInterface
      * Get the instance of the class.
      * @return static
      */
-    public static function getInstance(): static;
+    public static function getInstance();
 }
