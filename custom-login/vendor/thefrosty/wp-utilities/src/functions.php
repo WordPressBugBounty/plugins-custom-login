@@ -5,16 +5,45 @@ declare(strict_types=1);
 namespace TheFrosty\WpUtilities;
 
 use Symfony\Component\HttpFoundation\Request;
+use TheFrosty\WpUtilities\Exceptions\TerminationException;
 use function filter_var;
 use function get_bloginfo;
 use function is_array;
+use function is_callable;
 use function sanitize_text_field;
 use function version_compare;
 use function wp_enqueue_script;
 use function wp_register_script;
 use const FILTER_FLAG_IPV4;
 use const FILTER_FLAG_IPV6;
+use const FILTER_VALIDATE_BOOLEAN;
 use const FILTER_VALIDATE_IP;
+use const PHP_SAPI;
+
+const CIPHER = 'AES-256-CBC';
+const ENCRYPTION_KEY_OPTION = '_wp_utilities_encryption_key';
+
+/**
+ * Exit or throw an exception.
+ * @param bool|callable|null $throw Should an exception be thrown?
+ * @param string $message The Throwable message.
+ * @param string|int $status The exit status.
+ * @param array|null $args callable args
+ * @return never
+ * @throws TerminationException
+ */
+function exitOrThrow(
+    $throw = null,
+    string $message = '',
+    $status = 0,
+    ?array $args = null
+) {
+    $throw ??= isPhpunit();
+    if ($throw === true || (is_callable($throw) && filter_var($throw(...$args), FILTER_VALIDATE_BOOLEAN))) {
+        throw new TerminationException($message);
+    }
+    exit($status);
+}
 
 /**
  * Get the clients IP.
@@ -51,6 +80,23 @@ function getIpAddress(?Request $request = null): ?string
     }
 
     return sanitize_text_field($ip);
+}
+
+/**
+ * Is the current request CLI and PHPunit?
+ * @param Request|null $request
+ * @return bool
+ * @access private
+ */
+function isPhpunit(?Request $request = null): bool
+{
+    $request ??= Request::createFromGlobals();
+    if (PHP_SAPI !== 'cli' || !$request->server->has('argv')) {
+        return false;
+    }
+
+    $argv = $request->server->get('argv');
+    return isset($argv[0]) && (strpos($argv[0], 'phpunit') !== false || $argv[0] === '/usr/bin/phpunit');
 }
 
 /**

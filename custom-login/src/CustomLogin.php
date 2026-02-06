@@ -40,7 +40,7 @@ class CustomLogin extends AbstractHookProvider
     /**
      * @var string
      */
-    public const VERSION = '5.0.0';
+    public const VERSION = '5.1.2.2';
 
     /**
      * Get the API URL.

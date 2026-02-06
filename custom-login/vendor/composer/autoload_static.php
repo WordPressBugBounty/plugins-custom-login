@@ -9,94 +9,97 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
+        'd24932181e8483081b47b64b5b06065a' => __DIR__ . '/..' . '/oscarotero/env/src/env_function.php',
         '1a20c8c8ad0daee464581b090741335b' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/functions.php',
         'daae40667e0e805c1e3b33fa1d1fb32b' => __DIR__ . '/../..' . '/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' => 
+        'T' =>
         array (
             'TheFrosty\\WpUtilities\\' => 22,
             'TheFrosty\\CustomLogin\\' => 22,
         ),
-        'S' => 
+        'S' =>
         array (
-            'Symfony\\Polyfill\\Php83\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
         ),
-        'P' => 
+        'P' =>
         array (
             'Psr\\Container\\' => 14,
             'PostTypes\\' => 10,
         ),
-        'D' => 
+        'E' =>
+        array (
+            'Env\\' => 4,
+        ),
+        'D' =>
         array (
             'Dwnload\\WpSettingsApi\\' => 22,
             'Dwnload\\EddSoftwareLicenseManager\\' => 34,
         ),
-        'C' => 
+        'C' =>
         array (
             'Composer\\Installers\\' => 20,
         ),
-        'A' => 
+        'A' =>
         array (
             'Args\\' => 5,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'TheFrosty\\WpUtilities\\' => 
+        'TheFrosty\\WpUtilities\\' =>
         array (
             0 => __DIR__ . '/..' . '/thefrosty/wp-utilities/src',
         ),
-        'TheFrosty\\CustomLogin\\' => 
+        'TheFrosty\\CustomLogin\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'Symfony\\Polyfill\\Php83\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php83',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Component\\HttpFoundation\\' => 
+        'Symfony\\Component\\HttpFoundation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
-        'Psr\\Container\\' => 
+        'Psr\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'PostTypes\\' => 
+        'PostTypes\\' =>
         array (
             0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
-        'Dwnload\\WpSettingsApi\\' => 
+        'Env\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/oscarotero/env/src',
+        ),
+        'Dwnload\\WpSettingsApi\\' =>
         array (
             0 => __DIR__ . '/..' . '/dwnload/wp-settings-api/src',
         ),
-        'Dwnload\\EddSoftwareLicenseManager\\' => 
+        'Dwnload\\EddSoftwareLicenseManager\\' =>
         array (
             0 => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src',
         ),
-        'Composer\\Installers\\' => 
+        'Composer\\Installers\\' =>
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
-        'Args\\' => 
+        'Args\\' =>
         array (
             0 => __DIR__ . '/..' . '/johnbillion/args/src',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'P' => 
+        'P' =>
         array (
-            'Pimple' => 
+            'Pimple' =>
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),
@@ -272,15 +275,6 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
-        'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
-        'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
-        'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
-        'DateInvalidTimeZoneException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidTimeZoneException.php',
-        'DateMalformedIntervalStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedIntervalStringException.php',
-        'DateMalformedPeriodStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedPeriodStringException.php',
-        'DateMalformedStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedStringException.php',
-        'DateObjectError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateObjectError.php',
-        'DateRangeError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateRangeError.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\AbstractLicenceManager' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/AbstractLicenceManager.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\LicenseManager' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/LicenseManager.php',
         'Dwnload\\EddSoftwareLicenseManager\\Edd\\Models\\ActivateLicense' => __DIR__ . '/..' . '/dwnload/edd-software-license-manager/src/Edd/Models/ActivateLicense.php',
@@ -306,7 +300,7 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'Dwnload\\WpSettingsApi\\Settings\\SectionManager' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/Settings/SectionManager.php',
         'Dwnload\\WpSettingsApi\\TemplateLoader' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/TemplateLoader.php',
         'Dwnload\\WpSettingsApi\\WpSettingsApi' => __DIR__ . '/..' . '/dwnload/wp-settings-api/src/WpSettingsApi.php',
-        'Override' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/Override.php',
+        'Env\\Env' => __DIR__ . '/..' . '/oscarotero/env/src/Env.php',
         'Pimple\\Container' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Container.php',
         'Pimple\\Exception\\ExpectedInvokableException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php',
         'Pimple\\Exception\\FrozenServiceException' => __DIR__ . '/..' . '/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php',
@@ -331,7 +325,6 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-        'SQLite3Exception' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeader' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeader.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeaderItem' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeaderItem.php',
         'Symfony\\Component\\HttpFoundation\\BinaryFileResponse' => __DIR__ . '/..' . '/symfony/http-foundation/BinaryFileResponse.php',
@@ -448,7 +441,6 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'Symfony\\Component\\HttpFoundation\\UriSigner' => __DIR__ . '/..' . '/symfony/http-foundation/UriSigner.php',
         'Symfony\\Component\\HttpFoundation\\UrlHelper' => __DIR__ . '/..' . '/symfony/http-foundation/UrlHelper.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
-        'Symfony\\Polyfill\\Php83\\Php83' => __DIR__ . '/..' . '/symfony/polyfill-php83/Php83.php',
         'TheFrosty\\CustomLogin\\Api\\Activator' => __DIR__ . '/../..' . '/src/Api/Activator.php',
         'TheFrosty\\CustomLogin\\Api\\Cron' => __DIR__ . '/../..' . '/src/Api/Cron.php',
         'TheFrosty\\CustomLogin\\CustomLogin' => __DIR__ . '/../..' . '/src/CustomLogin.php',
@@ -471,10 +463,12 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'TheFrosty\\WpUtilities\\Api\\ObjectRegistrarManager' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/ObjectRegistrarManager.php',
         'TheFrosty\\WpUtilities\\Api\\PageTemplates' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/PageTemplates.php',
         'TheFrosty\\WpUtilities\\Api\\RegistrarInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/RegistrarInterface.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\AbstractRegistrar' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/AbstractRegistrar.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\AbstractShortcode' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/AbstractShortcode.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\HandlerInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/HandlerInterface.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\PaginationTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/PaginationTrait.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\Handler\\ShortcodeUiTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Handler/ShortcodeUiTrait.php',
+        'TheFrosty\\WpUtilities\\Api\\Shortcode\\Shortcode' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/Shortcode.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\ShortcodeInterface' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/ShortcodeInterface.php',
         'TheFrosty\\WpUtilities\\Api\\Shortcode\\ShortcodeRegistrar' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/Shortcode/ShortcodeRegistrar.php',
         'TheFrosty\\WpUtilities\\Api\\TransientsTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/TransientsTrait.php',
@@ -482,6 +476,7 @@ class ComposerStaticInitf62e2869c8a073942809daa8010715df
         'TheFrosty\\WpUtilities\\Api\\WpQueryTrait' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpQueryTrait.php',
         'TheFrosty\\WpUtilities\\Api\\WpRemote' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Api/WpRemote.php',
         'TheFrosty\\WpUtilities\\Exceptions\\Exception' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Exceptions/Exception.php',
+        'TheFrosty\\WpUtilities\\Exceptions\\TerminationException' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Exceptions/TerminationException.php',
         'TheFrosty\\WpUtilities\\Models\\BaseModel' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/BaseModel.php',
         'TheFrosty\\WpUtilities\\Models\\PageTemplate' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/PageTemplate.php',
         'TheFrosty\\WpUtilities\\Models\\WpQuery\\QueryArgs' => __DIR__ . '/..' . '/thefrosty/wp-utilities/src/Models/WpQuery/QueryArgs.php',

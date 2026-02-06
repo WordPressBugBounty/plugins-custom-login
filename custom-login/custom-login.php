@@ -3,11 +3,11 @@
  * Plugin Name: Custom Login
  * Plugin URI: https://frosty.media/plugins/custom-login
  * Description: A simple way to customize your WordPress <code>wp-login.php</code> screen! A <a href="https://frosty.media/">Frosty Media</a> plugin.
- * Version: 5.0.0
+ * Version: 5.1.2.2
  * Author: Austin Passy
  * Author URI: https://austin.passy.co
  * Requires at least: 6.4
- * Tested up to: 6.8.2
+ * Tested up to: 6.8.3
  * Requires PHP: 7.4
  * Text Domain: custom-login
  * GitHub Plugin URI: https://github.com/thefrosty/custom-login
@@ -53,7 +53,7 @@ if (version_compare(PHP_VERSION, '7.4', '<')) {
     return add_filter('custom_login_shutdown_error_message', static function (): string {
         return sprintf(
             esc_html__(
-                'Notice: Custom Login version %1$s requires PHP version >= 7.4, you are running %2$s, all features are currently disabled.',
+                'Notice: Custom Login version %1$s requires PHP version >= 8.3, you are running %2$s, all features are currently disabled.',
                 'custom-login'
             ),
             get_plugin_data(__FILE__, false, false)['Version'],
@@ -62,7 +62,9 @@ if (version_compare(PHP_VERSION, '7.4', '<')) {
     });
 }
 
-if (!is_readable(__DIR__ . '/vendor/autoload.php') && !defined('TheFrosty\CustomLogin\CUSTOM_LOGIN_FUNCTIONS')) {
+// Our functions.php file is autoloaded via composer, so maybe don't include a second autoload if installed globally.
+$isLoaded = defined('TheFrosty\CustomLogin\CUSTOM_LOGIN_FUNCTIONS');
+if (!is_readable(__DIR__ . '/vendor/autoload.php') && !$isLoaded) {
     return add_filter('custom_login_shutdown_error_message', static function (): string {
         return esc_html__(
             'Error: Custom Login can\'t find the autoload file (if installed from GitHub, please run `composer install`), all features are currently disabled.',
@@ -71,7 +73,7 @@ if (!is_readable(__DIR__ . '/vendor/autoload.php') && !defined('TheFrosty\Custom
     });
 }
 
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+if (file_exists(__DIR__ . '/vendor/autoload.php') && !$isLoaded) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 $plugin = PluginFactory::create('custom-login', __FILE__);

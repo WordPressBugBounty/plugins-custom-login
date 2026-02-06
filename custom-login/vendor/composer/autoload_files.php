@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     '6e3fae29631ef280660b3cdad06f25a8' => $vendorDir . '/symfony/deprecation-contracts/function.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
-    '662a729f963d39afe703c9d9b7ab4a8c' => $vendorDir . '/symfony/polyfill-php83/bootstrap.php',
+    'd24932181e8483081b47b64b5b06065a' => $vendorDir . '/oscarotero/env/src/env_function.php',
     '1a20c8c8ad0daee464581b090741335b' => $vendorDir . '/thefrosty/wp-utilities/src/functions.php',
     'daae40667e0e805c1e3b33fa1d1fb32b' => $baseDir . '/functions.php',
 );
