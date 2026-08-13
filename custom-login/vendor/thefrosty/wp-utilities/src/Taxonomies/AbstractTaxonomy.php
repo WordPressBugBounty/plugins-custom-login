@@ -21,9 +21,21 @@ abstract class AbstractTaxonomy
 
     use TaxonomyTrait;
 
+    /**
+     * @var string|null
+     */
     public const TAXONOMY_TYPE = null;
+    /**
+     * @var mixed[]|string|null
+     */
     public const POST_TYPE = null;
+    /**
+     * @var string|null
+     */
     public const SLUG = null;
+    /**
+     * @var string|null
+     */
     public const URL_SLUG = null;
 
     /**
@@ -66,9 +78,11 @@ abstract class AbstractTaxonomy
      */
     public static function getTerms(object $argument): array
     {
-        return array_filter((new ReflectionClass($argument))->getConstants(), static function (string $key): bool {
-            return strpos($key, 'TERM_') !== false;
-        }, ARRAY_FILTER_USE_KEY);
+        return array_filter(
+            (new ReflectionClass($argument))->getConstants(),
+            static fn(string $key): bool => strpos($key, 'TERM_') !== false,
+            ARRAY_FILTER_USE_KEY
+        );
     }
 
     /**

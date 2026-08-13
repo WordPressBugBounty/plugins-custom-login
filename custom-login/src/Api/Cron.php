@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TheFrosty\CustomLogin\Api;
 
@@ -15,7 +17,13 @@ use function wp_schedule_event;
 class Cron extends AbstractHookProvider
 {
 
+    /**
+     * @var string
+     */
     public const HOOK_DAILY = 'custom_login_daily_scheduled_events';
+    /**
+     * @var string
+     */
     public const HOOK_WEEKLY = 'custom_login_weekly_scheduled_events';
 
     /**

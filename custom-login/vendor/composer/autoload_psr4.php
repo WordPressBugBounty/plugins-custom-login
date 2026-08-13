@@ -16,5 +16,6 @@ return array(
     'Dwnload\\WpSettingsApi\\' => array($vendorDir . '/dwnload/wp-settings-api/src'),
     'Dwnload\\EddSoftwareLicenseManager\\' => array($vendorDir . '/dwnload/edd-software-license-manager/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
+    'BlakvGhost\\PHPValidator\\' => array($vendorDir . '/blakvghost/php-validator/src'),
     'Args\\' => array($vendorDir . '/johnbillion/args/src'),
 );

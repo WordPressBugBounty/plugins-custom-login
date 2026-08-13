@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TheFrosty\CustomLogin\WpAdmin;
 
@@ -24,8 +26,17 @@ class SettingsUpgrades extends AbstractContainerProvider
 
     use Viewable;
 
+    /**
+     * @var string
+     */
     public const ACTION_NONCE = self::class;
+    /**
+     * @var string
+     */
     public const AJAX_ACTION = 'custom_login_trigger_upgrades';
+    /**
+     * @var string
+     */
     public const OPTION_VERSION = 'custom_login_version';
 
     /**
@@ -56,11 +67,11 @@ class SettingsUpgrades extends AbstractContainerProvider
         $database_version = get_option(self::OPTION_VERSION);
 
         if (!$database_version) {
-            // 3.2.15 is the last version before 4.0.0
+            // 3.2.15 is the last version before 4.0.0.
             $database_version = '4.0.1';
         }
 
-        // Version less than 4.0.1
+        // Version less than 4.0.1.
         if (version_compare($database_version, '4.0', '<')) {
             $this->renderUpgradeNotice(
                 sprintf(
@@ -100,17 +111,17 @@ class SettingsUpgrades extends AbstractContainerProvider
      */
     protected function triggerUpgrades(): void
     {
-        check_ajax_referer(SettingsUpgrades::ACTION_NONCE);
+        check_ajax_referer(self::ACTION_NONCE);
 
         $version = get_option(self::OPTION_VERSION);
 
         if (!$version) {
-            // 3.2.15 is the last version before 4.0.0
+            // 3.2.15 is the last version before 4.0.0.
             $version = '3.2.15';
             add_option(self::OPTION_VERSION, $version);
         }
 
-        // Version less than 4.0.1
+        // Version less than 4.0.1.
         if (!$version || version_compare($version, '4.0.1', '<')) {
             $this->v401Upgrades();
         }

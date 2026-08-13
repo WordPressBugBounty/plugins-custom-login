@@ -22,9 +22,21 @@ use function wp_parse_args;
 class AdminColumns extends AbstractContainerProvider
 {
 
+    /**
+     * @var string
+     */
     public const TAG_MANAGE_POST_TYPES = Plugin::TAG . '/manage_post_types';
+    /**
+     * @var string
+     */
     public const TAG_MANAGE_POSTS_COLUMNS = Plugin::TAG . '/manage_posts_columns';
+    /**
+     * @var string
+     */
     public const TAG_MANAGE_POSTS_CUSTOM_COLUMN = Plugin::TAG . '/manage_posts_custom_column';
+    /**
+     * @var string
+     */
     public const TAG_MANAGE_MANAGE_EDIT_SORTABLE_COLUMNS = Plugin::TAG . '/manage_edit_sortable_columns';
 
     /**

@@ -1,6 +1,62 @@
 {
     "packages": [
         {
+            "name": "blakvghost/php-validator",
+            "version": "v2.3.1",
+            "version_normalized": "2.3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BlakvGhost/PHPValidator.git",
+                "reference": "83aa4e1a518ae51b3491590745a7a0dc7958f9ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BlakvGhost/PHPValidator/zipball/83aa4e1a518ae51b3491590745a7a0dc7958f9ae",
+                "reference": "83aa4e1a518ae51b3491590745a7a0dc7958f9ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "pestphp/pest": "^2.24"
+            },
+            "time": "2025-12-04T18:08:21+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "BlakvGhost\\PHPValidator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kabirou ALASSANE",
+                    "email": "kabirou.alassane@ferraydigitalsolutions.bj",
+                    "homepage": "https://github.com/BlakvGhost",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHPValidator is a modern PHP library for data validation in your PHP applications. It provides a flexible and extensible way to validate data using predefined rules or by creating custom validation rules.",
+            "keywords": [
+                "PHP Library",
+                "custom validation",
+                "data validation",
+                "php",
+                "validation",
+                "validation rules"
+            ],
+            "support": {
+                "issues": "https://github.com/BlakvGhost/PHPValidator/issues",
+                "source": "https://github.com/BlakvGhost/PHPValidator/tree/v2.3.1"
+            },
+            "install-path": "../blakvghost/php-validator"
+        },
+        {
             "name": "composer/installers",
             "version": "v2.3.0",
             "version_normalized": "2.3.0.0",
@@ -151,24 +207,24 @@
         },
         {
             "name": "dwnload/edd-software-license-manager",
-            "version": "2.1.1",
-            "version_normalized": "2.1.1.0",
+            "version": "2.3.2",
+            "version_normalized": "2.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dwnload/EddSoftwareLicenseManager.git",
-                "reference": "12d26d5be0abe489067943cd5fd130de718911eb"
+                "reference": "1610aa3336a4be244f408d7b240074ef021209fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dwnload/EddSoftwareLicenseManager/zipball/12d26d5be0abe489067943cd5fd130de718911eb",
-                "reference": "12d26d5be0abe489067943cd5fd130de718911eb",
+                "url": "https://api.github.com/repos/dwnload/EddSoftwareLicenseManager/zipball/1610aa3336a4be244f408d7b240074ef021209fb",
+                "reference": "1610aa3336a4be244f408d7b240074ef021209fb",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "~2.0",
-                "dwnload/wp-settings-api": "^3.9",
-                "php": "^8.1",
-                "thefrosty/wp-utilities": "^3.2"
+                "dwnload/wp-settings-api": "^3.11",
+                "php": "^8.3",
+                "thefrosty/wp-utilities": "^3.7"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -176,14 +232,13 @@
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpunit/php-code-coverage": "^9",
                 "phpunit/phpunit": "^9",
-                "roave/security-advisories": "dev-latest",
                 "roots/wordpress": "^6.7",
                 "squizlabs/php_codesniffer": "^3.2",
                 "symfony/var-dumper": "^6.4 || ^7.2",
                 "wp-phpunit/wp-phpunit": "^6.7",
                 "yoast/phpunit-polyfills": "^3.0 || ^4.0"
             },
-            "time": "2025-04-23T21:23:08+00:00",
+            "time": "2026-01-03T01:49:24+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -206,7 +261,7 @@
             "description": "A PHP class abstraction for managing WordPress plugin licenses and auto-updates that are sold on an Easy Digital Downloads store.",
             "support": {
                 "issues": "https://github.com/dwnload/EddSoftwareLicenseManager/issues",
-                "source": "https://github.com/dwnload/EddSoftwareLicenseManager/tree/2.1.1"
+                "source": "https://github.com/dwnload/EddSoftwareLicenseManager/tree/2.3.2"
             },
             "install-path": "../dwnload/edd-software-license-manager"
         },
@@ -276,17 +331,17 @@
         },
         {
             "name": "jjgrainger/posttypes",
-            "version": "v2.2.1",
-            "version_normalized": "2.2.1.0",
+            "version": "v2.2.2",
+            "version_normalized": "2.2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jjgrainger/PostTypes.git",
-                "reference": "2f20f628ec44404960df4b1ae5d623397a66aec1"
+                "reference": "f5d5812992fe204409d585d936c7c110b8d23773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jjgrainger/PostTypes/zipball/2f20f628ec44404960df4b1ae5d623397a66aec1",
-                "reference": "2f20f628ec44404960df4b1ae5d623397a66aec1",
+                "url": "https://api.github.com/repos/jjgrainger/PostTypes/zipball/f5d5812992fe204409d585d936c7c110b8d23773",
+                "reference": "f5d5812992fe204409d585d936c7c110b8d23773",
                 "shasum": ""
             },
             "require": {
@@ -296,7 +351,7 @@
                 "phpunit/phpunit": "^9.6",
                 "squizlabs/php_codesniffer": "3.*"
             },
-            "time": "2024-10-13T17:23:48+00:00",
+            "time": "2026-01-25T17:36:17+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -328,17 +383,17 @@
         },
         {
             "name": "johnbillion/args",
-            "version": "2.2.2",
-            "version_normalized": "2.2.2.0",
+            "version": "2.5.0",
+            "version_normalized": "2.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/args.git",
-                "reference": "d13fe0c5388f66cfa9310a1940625c27347c38d9"
+                "reference": "21587c676b7335c85092c89b85afde0a7c8e8c80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/args/zipball/d13fe0c5388f66cfa9310a1940625c27347c38d9",
-                "reference": "d13fe0c5388f66cfa9310a1940625c27347c38d9",
+                "url": "https://api.github.com/repos/johnbillion/args/zipball/21587c676b7335c85092c89b85afde0a7c8e8c80",
+                "reference": "21587c676b7335c85092c89b85afde0a7c8e8c80",
                 "shasum": ""
             },
             "require": {
@@ -349,15 +404,15 @@
                 "humanmade/coding-standards": "1.2.1",
                 "johnbillion/falsey-assertequals-detector": "^3",
                 "phpdocumentor/reflection": "~4.0 || ~5.0",
-                "phpstan/phpstan": "1.12.12",
-                "phpstan/phpstan-phpunit": "1.4.1",
-                "phpstan/phpstan-strict-rules": "1.6.1",
+                "phpstan/phpstan": "2.1.37",
+                "phpstan/phpstan-phpunit": "2.0.12",
+                "phpstan/phpstan-strict-rules": "2.0.8",
                 "phpunit/phpunit": "^9.0",
                 "roots/wordpress-core-installer": "1.100.0",
-                "roots/wordpress-full": "6.8",
-                "szepeviktor/phpstan-wordpress": "1.3.5"
+                "roots/wordpress-full": "~7.0.0",
+                "szepeviktor/phpstan-wordpress": "2.0.3"
             },
-            "time": "2025-04-16T18:09:01+00:00",
+            "time": "2026-05-22T14:18:45+00:00",
             "type": "library",
             "extra": {
                 "args-shapes": [
@@ -497,6 +552,16 @@
                         "function": "\\wp_nav_menu()"
                     },
                     {
+                        "file": "vendor/wordpress/wordpress/wp-includes/abilities-api.php",
+                        "param": "args",
+                        "function": "\\wp_register_ability()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/abilities-api.php",
+                        "param": "args",
+                        "function": "\\wp_register_ability_category()"
+                    },
+                    {
                         "file": "vendor/wordpress/wordpress/wp-includes/http.php",
                         "param": "args",
                         "function": "\\wp_remote_get()"
@@ -550,6 +615,16 @@
                         "file": "vendor/wordpress/wordpress/wp-includes/user.php",
                         "param": "userdata",
                         "function": "\\wp_update_user()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/abilities-api/class-wp-abilities-registry.php",
+                        "param": "args",
+                        "method": "\\WP_Abilities_Registry::register()"
+                    },
+                    {
+                        "file": "vendor/wordpress/wordpress/wp-includes/abilities-api/class-wp-ability-categories-registry.php",
+                        "param": "args",
+                        "method": "\\WP_Ability_Categories_Registry::register()"
                     },
                     {
                         "file": "vendor/wordpress/wordpress/wp-includes/class-wp-block-type.php",
@@ -628,7 +703,7 @@
             "description": "I don't want to get into an argument about this.",
             "support": {
                 "issues": "https://github.com/johnbillion/args/issues",
-                "source": "https://github.com/johnbillion/args/tree/2.2.2"
+                "source": "https://github.com/johnbillion/args/tree/2.5.0"
             },
             "funding": [
                 {
@@ -698,17 +773,17 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.6.0",
-            "version_normalized": "3.6.0.0",
+            "version": "v3.6.2",
+            "version_normalized": "3.6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a70f552d338f9266eec6606c1f0b324da5514c96"
+                "reference": "8cfe7f74ac22a433d303914eba9ea4c2a834edce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a70f552d338f9266eec6606c1f0b324da5514c96",
-                "reference": "a70f552d338f9266eec6606c1f0b324da5514c96",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/8cfe7f74ac22a433d303914eba9ea4c2a834edce",
+                "reference": "8cfe7f74ac22a433d303914eba9ea4c2a834edce",
                 "shasum": ""
             },
             "require": {
@@ -718,11 +793,11 @@
             "require-dev": {
                 "phpunit/phpunit": "*"
             },
-            "time": "2025-11-12T12:31:38+00:00",
+            "time": "2026-02-26T08:23:44+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -748,7 +823,7 @@
                 "dependency injection"
             ],
             "support": {
-                "source": "https://github.com/silexphp/Pimple/tree/v3.6.0"
+                "source": "https://github.com/silexphp/Pimple/tree/v3.6.2"
             },
             "install-path": "../pimple/pimple"
         },
@@ -810,23 +885,23 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.6.0",
-            "version_normalized": "3.6.0.0",
+            "version": "v3.7.1",
+            "version_normalized": "3.7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/f3202fa1b5097b0af062dc978b32ecf63404e31d",
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1"
             },
-            "time": "2024-09-25T14:21:43+00:00",
+            "time": "2026-06-05T06:23:12+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -834,7 +909,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "installation-source": "dist",
@@ -860,7 +935,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -872,6 +947,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -880,17 +959,17 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v7.4.0",
-            "version_normalized": "7.4.0.0",
+            "version": "v7.4.16",
+            "version_normalized": "7.4.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "769c1720b68e964b13b58529c17d4a385c62167b"
+                "reference": "b676451bb638e99a7d34d8a2be90406822e301eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/769c1720b68e964b13b58529c17d4a385c62167b",
-                "reference": "769c1720b68e964b13b58529c17d4a385c62167b",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b676451bb638e99a7d34d8a2be90406822e301eb",
+                "reference": "b676451bb638e99a7d34d8a2be90406822e301eb",
                 "shasum": ""
             },
             "require": {
@@ -913,7 +992,7 @@
                 "symfony/mime": "^6.4|^7.0|^8.0",
                 "symfony/rate-limiter": "^6.4|^7.0|^8.0"
             },
-            "time": "2025-11-13T08:49:24+00:00",
+            "time": "2026-08-07T11:50:27+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -941,7 +1020,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v7.4.0"
+                "source": "https://github.com/symfony/http-foundation/tree/v7.4.16"
             },
             "funding": [
                 {
@@ -965,17 +1044,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.33.0",
-            "version_normalized": "1.33.0.0",
+            "version": "v1.38.2",
+            "version_normalized": "1.38.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -988,7 +1067,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2024-12-23T08:48:59+00:00",
+            "time": "2026-05-27T06:59:30+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1029,7 +1108,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -1053,20 +1132,21 @@
         },
         {
             "name": "thefrosty/wp-utilities",
-            "version": "v3.8.8.1",
-            "version_normalized": "3.8.8.1",
+            "version": "v3.10.0",
+            "version_normalized": "3.10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thefrosty/wp-utilities.git",
-                "reference": "efb2c309805e7c4b918e078f6993281ba7185f70"
+                "reference": "108057e3b25e94a1c4180b3ddadc62e689b4fe10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thefrosty/wp-utilities/zipball/efb2c309805e7c4b918e078f6993281ba7185f70",
-                "reference": "efb2c309805e7c4b918e078f6993281ba7185f70",
+                "url": "https://api.github.com/repos/thefrosty/wp-utilities/zipball/108057e3b25e94a1c4180b3ddadc62e689b4fe10",
+                "reference": "108057e3b25e94a1c4180b3ddadc62e689b4fe10",
                 "shasum": ""
             },
             "require": {
+                "blakvghost/php-validator": "^2.3",
                 "ext-json": "*",
                 "ext-openssl": "*",
                 "jjgrainger/posttypes": "^2.2",
@@ -1093,11 +1173,11 @@
                 "yoast/phpunit-polyfills": "^4.0"
             },
             "suggest": {
-                "illuminate/encryption": "Laravel level enrcyption & decryption.",
+                "illuminate/encryption": "Laravel level encryption & decryption.",
                 "jjgrainger/posttypes": "Simple WordPress custom post types.",
                 "yahnis-elsts/plugin-update-checker": "A custom update checker for WordPress plugins."
             },
-            "time": "2025-11-27T20:05:37+00:00",
+            "time": "2026-01-23T22:07:17+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1123,7 +1203,7 @@
             "description": "A library containing my standard development resources",
             "support": {
                 "issues": "https://github.com/thefrosty/wp-utilities/issues",
-                "source": "https://github.com/thefrosty/wp-utilities/tree/v3.8.8.1"
+                "source": "https://github.com/thefrosty/wp-utilities/tree/v3.10.0"
             },
             "install-path": "../thefrosty/wp-utilities"
         }

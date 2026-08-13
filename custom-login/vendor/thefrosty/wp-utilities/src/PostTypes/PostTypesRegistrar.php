@@ -16,6 +16,9 @@ use const ARRAY_FILTER_USE_KEY;
 abstract class PostTypesRegistrar extends ObjectRegistrarManager
 {
 
+    /**
+     * @var string
+     */
     public const TAG_POST_TYPE_MANAGER_REGISTRAR = 'wp-utilities/post_types/post_type_manager/registrar';
 
     /**
@@ -35,7 +38,7 @@ abstract class PostTypesRegistrar extends ObjectRegistrarManager
     {
         return array_filter(
             apply_filters(self::TAG_POST_TYPE_MANAGER_REGISTRAR, []),
-            fn(string $post_type): bool => !empty($post_type),
+            static fn(string $post_type): bool => !empty($post_type),
             ARRAY_FILTER_USE_KEY
         );
     }

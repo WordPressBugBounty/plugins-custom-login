@@ -9,11 +9,13 @@ use TheFrosty\WpUtilities\Plugin\HttpFoundationRequestInterface;
 use TheFrosty\WpUtilities\Plugin\HttpFoundationRequestTrait;
 use WP_Query;
 use function apply_filters;
+use function array_pad;
 use function array_shift;
 use function defined;
 use function esc_attr;
 use function esc_html__;
 use function esc_url;
+use function explode;
 use function is_admin;
 use function is_array;
 use function is_numeric;
@@ -77,7 +79,9 @@ class RestrictManagePosts extends AbstractHookProvider implements HttpFoundation
      */
     protected function enqueueScripts(string $hook): void
     {
-        if ($hook !== 'edit.php') {
+        $enabled = apply_filters(self::TAG_FILTER_ENABLE_SCRIPTS, true);
+
+        if ($hook !== 'edit.php' || $enabled !== true) {
             return;
         }
 
@@ -99,7 +103,7 @@ class RestrictManagePosts extends AbstractHookProvider implements HttpFoundation
             );
         }
         wpRegisterScript(self::HANDLE_UTILITY_FUNCTIONS, sprintf('https://cdn.jsdelivr.net/gh/thefrosty/wp-utilities@3/assets/js/utilities/functions%s.js', $min), [], false, ['in_footer' => true]);
-        wpRegisterScript(self::HANDLE, sprintf('https://cdn.jsdelivr.net/gh/thefrosty/wp-utilities@3/assets/js/%s%s.js', self::HANDLE, $min), ['select2', self::HANDLE_UTILITY_FUNCTIONS], false, ['in_footer' => true]);
+        wpRegisterScript(self::HANDLE, sprintf('https://cdn.jsdelivr.net/gh/thefrosty/wp-utilities@3/assets/js/%s%s.js', self::HANDLE, $min), (array)apply_filters(self::TAG_FILTER_SCRIPT_DEPENDENCIES, ['select2', self::HANDLE_UTILITY_FUNCTIONS]), false, ['in_footer' => true]);
         wp_enqueue_style('select2');
         wp_enqueue_script(self::HANDLE);
     }
@@ -146,7 +150,8 @@ class RestrictManagePosts extends AbstractHookProvider implements HttpFoundation
             esc_html__('Meta Value', 'wp-utilities'),
             $meta_values
         );
-        if (!empty($meta_keys) && !empty($meta_values)) {
+        $enabled = apply_filters(self::TAG_FILTER_ADVANCED_SEARCH, true, $post_type);
+        if (!empty($meta_keys) && !empty($meta_values) && $enabled === true) {
             $this->inputHtml(self::ADMIN_SEARCH_FIELD_VALUE);
         }
         unset($meta_keys, $meta_values);
@@ -174,10 +179,15 @@ class RestrictManagePosts extends AbstractHookProvider implements HttpFoundation
             !empty($this->getRequest()->query->get(self::ADMIN_FILTER_FIELD_NAME)) &&
             !empty($this->getRequest()->query->get(self::ADMIN_FILTER_FIELD_VALUE))
         ) {
+            $value = $this->getRequest()->query->get(self::ADMIN_FILTER_FIELD_VALUE);
+            if (strpos($value, 'COMPARE:') !== false) {
+                [, $compare, $value] = array_pad(explode(':', $value), 3, '');
+            }
             $query->set('meta_query', [
                 [
                     'key' => $this->getRequest()->query->get(self::ADMIN_FILTER_FIELD_NAME),
-                    'value' => $this->getRequest()->query->get(self::ADMIN_FILTER_FIELD_VALUE),
+                    'value' => sanitize_text_field($value),
+                    'compare' => $compare ?? '=', // Default to `=`.
                 ],
             ]);
         }

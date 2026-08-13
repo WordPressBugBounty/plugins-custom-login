@@ -16,6 +16,9 @@ use const ARRAY_FILTER_USE_KEY;
 abstract class ColumnsRegistrar extends ObjectRegistrarManager
 {
 
+    /**
+     * @var string
+     */
     public const TAG_COLUMNS_MANAGER_REGISTRAR = 'wp-utilities/post_types/columns_manager/registrar';
 
     /**
@@ -35,7 +38,7 @@ abstract class ColumnsRegistrar extends ObjectRegistrarManager
     {
         return array_filter(
             apply_filters(self::TAG_COLUMNS_MANAGER_REGISTRAR, []),
-            fn(string $column): bool => !empty($column),
+            static fn(string $column): bool => !empty($column),
             ARRAY_FILTER_USE_KEY
         );
     }

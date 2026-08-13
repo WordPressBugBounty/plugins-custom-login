@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TheFrosty\CustomLogin;
 
@@ -14,6 +16,9 @@ use function dirname;
 class ServiceProvider implements ServiceProviderInterface
 {
 
+    /**
+     * @var string
+     */
     public const WP_UTILITIES_VIEW = 'wp_utilities.view';
 
     /**
